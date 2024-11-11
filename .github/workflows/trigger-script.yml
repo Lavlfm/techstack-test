@@ -1,0 +1,20 @@
+name: Test Task Part2
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+jobs:
+  run_bash_script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+
+      - name: Run a Script from Part 1
+        run: |
+          chmod +x testtask.sh
+          ./testtask.sh
+
